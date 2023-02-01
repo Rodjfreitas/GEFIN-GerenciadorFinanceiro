@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Itim', cursive;
+}
+
+:root{
+  --global-colorLogo: #56487d;
+  --global-inputColorText:rgba(68, 65, 65, 0.788);
+  --global-backgroundColor:#56487d1e;
+  --global-backgroundShadow:#56487d25;
+}
+
+body{
+  background-color: var(--global-backgroundColor);
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  
+  
+}
+
+img{
+  width: 100%;
+  object-fit: cover;
+  max-width: 300px;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  border-radius: 15px;
+  margin: auto;
+  background-color: var(--global-backgroundShadow);
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+p{
+  color: var(--global-colorLogo);
+  text-align: justify;
+}
+
+#formMain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+#formMain p{
+  text-align: left;
+  font-style: italic;
+  margin-left: 5px;
+  
+}
+
+#formMain input{
+  border-radius: 10px;
+  border: 1px solid var(--global-colorLogo);
+  padding: 5px;
+  text-align: center;
+  color:var(--global-inputColorText)
+}
+
+#btnEnter{
+  padding: 10px 40px;
+  font-weight: 900;
+  border: none;
+  border-radius: 50px;
+  color: var(--global-colorLogo);
+  background-color: var(--global-backgroundShadow);
+}
+
+#btnEnter:hover{
+  cursor: pointer;
+  background-color: rgba(14, 221, 14, 0.788);
+  color: green;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  
+}
