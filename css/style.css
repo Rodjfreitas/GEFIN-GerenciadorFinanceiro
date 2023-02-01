@@ -9,7 +9,7 @@
   --global-colorLogo: #56487d;
   --global-inputColorText:rgba(68, 65, 65, 0.788);
   --global-backgroundColor:#56487d1e;
-  --global-backgroundShadow:#56487d25;
+  --global-backgroundShadow:rgba(255, 255, 255, 0.336);
 }
 
 body{
@@ -21,8 +21,7 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 5px;
   
   
 }
@@ -54,14 +53,15 @@ footer{
 
 p{
   color: var(--global-colorLogo);
-  text-align: justify;
+  text-align: center;
 }
+
 
 #formMain{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 10px 0 30px;
 }
 
 #formMain p{
@@ -80,19 +80,24 @@ p{
 }
 
 #btnEnter{
-  padding: 10px 40px;
+  padding: 10px 50px;
   font-weight: 900;
   border: none;
   border-radius: 50px;
   color: var(--global-colorLogo);
-  background-color: var(--global-backgroundShadow);
+  border: 1px solid var(--global-colorLogo);
 }
 
 #btnEnter:hover{
   cursor: pointer;
-  background-color: rgba(14, 221, 14, 0.788);
-  color: green;
+  background-color: var(--global-colorLogo);
+  color: white;
   letter-spacing: 3px;
   text-transform: uppercase;
   
+}
+
+
+#pageAction{
+  display: none;
 }
