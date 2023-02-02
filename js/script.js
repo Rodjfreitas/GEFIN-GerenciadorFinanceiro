@@ -23,6 +23,13 @@ function enterApp (){
       header.appendChild(identificacao)
 
       var pagePrincipal = document.querySelector('#pageMain')
+      pagePrincipal.style.transition = 'width 3s ease-in-out'
       pagePrincipal.style.display = 'none'
+      var pageAction = document.querySelector('#pageAction')
+      pageAction.style.display = 'block'
     }
+}
+
+function enterInformation(){
+  
 }

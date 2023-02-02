@@ -51,7 +51,7 @@ footer{
   padding: 20px;
 }
 
-p{
+#pageMain p{
   color: var(--global-colorLogo);
   text-align: center;
 }
@@ -102,27 +102,20 @@ p{
 #pageAction{
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 
 #Resultados{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 30px 0px;
-  box-shadow: 1px 2px 5px 6px rgba(0, 0, 0, 0.137);
+  justify-content: space-around;
+}
+
+#Resultados div{
   padding: 10px;
+  box-shadow: 1px 3px 5px 3px #01000f2d;
+  margin: 20px 0px;
 }
 
-#Resultados p{
-  text-align: left;
-  padding-bottom: 10px;
-  font-size: 18px;
-  text-decoration: overline;
-}
-
-#Resultados output{
-  font-size: 20px;
-}
 
 #entradas{
   color: rgb(15, 218, 15);
@@ -130,3 +123,53 @@ p{
 #saidas{
   color: rgb(238, 74, 74);
 }
+
+
+#lancamentos{
+  display: grid;
+  margin: 20px;
+}
+
+#lancamentos input{
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#lancamentos p{
+  margin-bottom: 10px;
+}
+
+#btnInput{
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+#btnInput:hover{
+  cursor: pointer;
+  transform: translateY(3px)
+}
+
+#txtDesc{
+}
+#txtValor{
+
+}
+#txtTipo{
+
+}
+
+#printInput{
+  background-color: white;
+  border-radius: 10px;
+  margin: 15px;
+}
+.printCab{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+

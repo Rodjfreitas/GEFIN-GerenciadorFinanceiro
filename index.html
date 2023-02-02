@@ -54,6 +54,33 @@
         <output id="total">Resultado</output>
       </div>
     </div>  
+
+    <div id="lancamentos">
+      <p>Descrição:<br>
+        <input type="text" name="txtDesc" id="txtDesc">
+      </p>
+
+      <p>Valor:<br>
+        <input type="number" name="txtValor" id="txtValor">
+      </p>
+
+      <p>Tipo:<br>
+        <input type="radio" name="txtTipo" id="entrada" checked>
+        <label for="entrada">Receitas</label>
+        <input type="radio" name="txtTipo" id="saida">
+        <label for="saida">Despesas</label>
+      </p>
+      
+      <input type="button" id="btnInput" value="Input" onclick="enterInformation()">
+    </div>
+
+    <div id="printInput">
+      <div class="printCab">
+        <strong>Descrição</strong>
+        <strong>Valor</strong>
+        <strong>Tipo</strong>
+      </div>
+    </div>
   </section>
 
   <footer>
