@@ -32,8 +32,8 @@ img{
   max-width: 300px;
 }
 
-section{
-  display: flex;
+#pageMain{
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -98,6 +98,23 @@ p{
 }
 
 
+
 #pageAction{
-  display: none;
+  display: flex;
+  flex-direction: column;
+}
+
+#Resultados{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 10px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#Resultados p{
+  text-align: left;
+  padding-bottom: 10px;
+  font-size: 20px;
 }
