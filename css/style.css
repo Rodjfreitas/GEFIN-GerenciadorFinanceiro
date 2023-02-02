@@ -108,13 +108,25 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 10px;
-  border: 1px solid black;
+  margin: 30px 0px;
+  box-shadow: 1px 2px 5px 6px rgba(0, 0, 0, 0.137);
   padding: 10px;
 }
 
 #Resultados p{
   text-align: left;
   padding-bottom: 10px;
+  font-size: 18px;
+  text-decoration: overline;
+}
+
+#Resultados output{
   font-size: 20px;
+}
+
+#entradas{
+  color: rgb(15, 218, 15);
+}
+#saidas{
+  color: rgb(238, 74, 74);
 }
