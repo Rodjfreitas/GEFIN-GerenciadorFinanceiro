@@ -10,6 +10,8 @@
   --global-inputColorText:rgba(68, 65, 65, 0.788);
   --global-backgroundColor:#56487d1e;
   --global-backgroundShadow:rgba(255, 255, 255, 0.336);
+  --global-green:rgb(15, 218, 15);
+  --global-red:rgb(238, 74, 74);
 }
 
 body{
@@ -118,10 +120,14 @@ footer{
 
 
 #entradas{
-  color: rgb(15, 218, 15);
+  color: var(--global-green);
 }
 #saidas{
-  color: rgb(238, 74, 74);
+  color: var(--global-red);
+}
+
+output{
+  font-size: 20px;
 }
 
 
