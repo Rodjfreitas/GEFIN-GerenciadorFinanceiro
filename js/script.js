@@ -38,7 +38,7 @@ function enterInformation(){
     alert('Por favor, verifique os dados informados.')
   }else{
     var entradas = document.querySelector('#entradas')
-    var saidas = document.querySelector('#sadas')
+    var saidas = document.querySelector('#saidas')
     var total = document.querySelector('#total')
     
     
@@ -46,20 +46,27 @@ function enterInformation(){
     var txtTipo = document.getElementsByName('txtTipo')    
     var tipo;
 
-    if(txtTipo[0].checked){
-      tipo = "Entrada"
-      entradas.innerText = `${(Number(entradas.value) + Number(Valor.value)).toFixed(2)}`
+      if(txtTipo[0].checked){
+        tipo = "Entrada"
+        entradas.innerText = `${(Number(entradas.value) + Number(Valor.value)).toFixed(2)}`
 
 
 
-    } else if(txtTipo[1].checked){
-      tipo = "Saida"
-      saidas.innerText = `${(Number(saidas.value) + Number(Valor.value)).toFixed(2)}`
-      console.log(saidas)
-    }
+      } else if(txtTipo[1].checked){
+        tipo = "Saida"
+        saidas.innerText = `${(Number(saidas.value) + Number(Valor.value)).toFixed(2)}`
+        
+      }
+      total.innerText = `${(Number(entradas.value) - Number(saidas.value)).toFixed(2)}`
+      if(total.value > 0){
+        total.style.color = 'var(--global-green)'
+      }else{
+        total.style.color = 'var(--global-red)'
+      }
     
     Valor.value = ""
     Descricao.value =""
+    
   }
   
 
