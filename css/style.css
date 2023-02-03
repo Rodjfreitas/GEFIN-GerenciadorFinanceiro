@@ -172,9 +172,7 @@ output{
   margin: 15px;
 }
 .printCab{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  width: 100%;
 }
 
 

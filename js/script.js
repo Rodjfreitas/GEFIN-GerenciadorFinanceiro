@@ -64,16 +64,33 @@ function enterInformation(){
         total.style.color = 'var(--global-red)'
       }
       
-      var lancamento = document.createElement('div')
+      /*var lancamento = document.createElement('div')
       lancamento.setAttribute('class','lcm')
       lancamento.innerHTML = `<p>${Descricao.value}</p><p>${(Number(Valor.value)).toFixed(2)}</p><p>${tipo}</p>`
       lancamento.style.display = 'flex'
       lancamento.style.justifyContent = 'space-between'
       lancamento.style.fontSize = '15px'
-      lancamento.style.margin = '5px 0px'
+      lancamento.style.margin = '10px 0px'
       var printInput = document.querySelector('#printInput')
-      printInput.appendChild(lancamento)
+      printInput.appendChild(lancamento)*/
 
+
+      var lancamento = document.createElement('tr')
+      lancamento.setAttribute('class','lcm')
+      var lanDescricao = document.createElement('td')
+      var lanValor = document.createElement('td')
+      var lanTipo = document.createElement('td')
+
+      lanDescricao.innerText = `${Descricao.value}`
+      lanValor.innerText = `${(Number(Valor.value)).toFixed(2)}`
+      lanTipo.innerText = `${tipo}`
+      
+      lancamento.appendChild(lanDescricao)
+      lancamento.appendChild(lanValor)
+      lancamento.appendChild(lanTipo)
+
+      var printCab = document.querySelector('.printCab')
+      printCab.appendChild(lancamento)
     
     Valor.value = ""
     Descricao.value =""
