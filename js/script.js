@@ -63,11 +63,25 @@ function enterInformation(){
       }else{
         total.style.color = 'var(--global-red)'
       }
+      
+      var lancamento = document.createElement('div')
+      lancamento.setAttribute('class','lcm')
+      lancamento.innerHTML = `<p>${Descricao.value}</p><p>${(Number(Valor.value)).toFixed(2)}</p><p>${tipo}</p>`
+      lancamento.style.display = 'flex'
+      lancamento.style.justifyContent = 'space-between'
+      lancamento.style.fontSize = '15px'
+      lancamento.style.margin = '5px 0px'
+      var printInput = document.querySelector('#printInput')
+      printInput.appendChild(lancamento)
+
     
     Valor.value = ""
     Descricao.value =""
+    Descricao.focus()
     
   }
+
+
   
 
 }
