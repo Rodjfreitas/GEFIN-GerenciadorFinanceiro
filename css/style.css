@@ -134,7 +134,7 @@ output{
 
 #lancamentos{
   display: grid;
-  margin: 20px;
+  margin: auto;
 }
 
 #lancamentos input{
@@ -150,7 +150,7 @@ output{
 }
 
 form input{
-  margin: 20px;
+  margin: 5px;
 }
 
 form label:hover{
@@ -186,11 +186,19 @@ form label:hover{
   width: 100%;
 }
 
+.printCab td{
+  padding: 5px 0;
+}
+
 
 .Anality{
   text-align: center;
   padding: 20px;
   color: var(--global-colorLogo);
+}
+
+.cabecalho{
+  text-decoration: underline;
 }
 
 
@@ -217,6 +225,7 @@ form label:hover{
 
   #lancamentos{
     grid-area: B;
+    margin: 20px
     
   }
 
