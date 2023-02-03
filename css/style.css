@@ -141,10 +141,12 @@ output{
   padding: 5px 10px;
   border-radius: 20px;
   text-align: center;
+  font-size: 18px;
 }
 
 #lancamentos p{
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
 #btnInput{
@@ -174,6 +176,13 @@ output{
 }
 .printCab{
   width: 100%;
+}
+
+
+.Anality{
+  text-align: center;
+  padding: 20px;
+  color: var(--global-colorLogo);
 }
 
 

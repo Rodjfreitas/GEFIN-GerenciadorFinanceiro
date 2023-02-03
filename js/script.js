@@ -64,6 +64,8 @@ function enterInformation(){
       }else{
         total.style.color = 'var(--global-red)'
       }
+
+
       
       var lancamento = document.createElement('tr')
       lancamento.setAttribute('class','lcm')
@@ -94,11 +96,21 @@ function enterInformation(){
       lancamento.appendChild(lanTipo)
 
       var printCab = document.querySelector('.printCab')
-      printCab.appendChild(lancamento)
+      printCab.appendChild(lancamento)    
     
     Valor.value = ""
     Descricao.value =""
     Descricao.focus()
+
+
+    var perfil = document.querySelector('.Anality')
+    if(total.value < 0){
+      perfil.innerText = 'Perigo: Reveja seu planejamento financeiro. Você não está conseguindo cumprir com suas responsabilidades'
+    } else if(total.value < 300){
+      perfil.innerText = 'Alerta: Você cumpre com suas responsabilidades, mas seu saldo para emergências é bem apertado.'
+    } else{
+      perfil.innerText = 'Parabéns, sua saúde financeira é invejável'
+    }
     
   }
 
@@ -106,3 +118,4 @@ function enterInformation(){
   
 
 }
+
