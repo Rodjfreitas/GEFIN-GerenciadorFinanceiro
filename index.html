@@ -64,12 +64,14 @@
         <input type="number" name="txtValor" id="txtValor">
       </p>
 
-      <p>Tipo:<br>
-        <input type="radio" name="txtTipo" id="entrada" checked>
-        <label for="entrada">Receitas</label>
-        <input type="radio" name="txtTipo" id="saida">
-        <label for="saida">Despesas</label>
-      </p>
+      <form action="">
+        <p>Tipo:<br>
+          <input type="radio" name="txtTipo" id="entrada" checked>
+          <label for="entrada">Receitas</label>
+          <input type="radio" name="txtTipo" id="saida">
+          <label for="saida">Despesas</label>
+        </p>
+      </form>
       
       <input type="button" id="btnInput" value="Input" onclick="enterInformation()">
     </div>
@@ -83,7 +85,7 @@
         </tr>
       </table>
     </div>
-    <div>
+    <div id="Anality">
       <p class="Anality"></p>
     </div>
   </section>

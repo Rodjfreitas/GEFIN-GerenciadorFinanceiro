@@ -149,6 +149,14 @@ output{
   font-size: 20px;
 }
 
+form input{
+  margin: 20px;
+}
+
+form label:hover{
+  cursor: pointer;
+}
+
 #btnInput{
   background-color: blue;
   color: white;
@@ -183,6 +191,57 @@ output{
   text-align: center;
   padding: 20px;
   color: var(--global-colorLogo);
+}
+
+
+@media (min-width:800px){
+
+  #pageAction{
+    width: 800px;
+    display: grid;
+    grid-template-areas: 
+    'A B B'
+    'C C C'
+    'D D D';
+  }
+
+  #Resultados{
+    grid-area: A;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #Resultados div{
+    border-radius: 15px;
+  }
+
+  #lancamentos{
+    grid-area: B;
+    
+  }
+
+  #txtDesc,#txtValor{
+    width: 100%;
+  }
+
+  #printInput{
+    grid-area: C;
+  }
+
+  form input{
+    margin: 20px;
+  }
+
+  form label:hover{
+    cursor: pointer;
+  }
+
+  #Anality{
+    grid-area: D;
+  }
+  .Anality{
+  }
+
 }
 
 
