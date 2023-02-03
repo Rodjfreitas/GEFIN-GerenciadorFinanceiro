@@ -101,11 +101,11 @@ function enterInformation(){
 
     var perfil = document.querySelector('.Anality')
     if(total.value < 0){
-      perfil.innerText = 'Perigo: Reveja seu planejamento financeiro. Você não está conseguindo cumprir com suas responsabilidades'
+      perfil.innerText = 'Perigo: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
     } else if(total.value < 300){
-      perfil.innerText = 'Alerta: Você cumpre com suas responsabilidades, mas seu saldo para emergências é bem apertado.'
+      perfil.innerText = 'Alerta: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
     } else{
-      perfil.innerText = 'Parabéns, sua saúde financeira é invejável'
+      perfil.innerText = 'Parabéns! Seu planejamento financeiro é exemplar.'
     }
     
   }
