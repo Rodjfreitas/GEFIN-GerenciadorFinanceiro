@@ -12,6 +12,8 @@
   --global-backgroundShadow:rgba(255, 255, 255, 0.336);
   --global-green:rgb(15, 218, 15);
   --global-red:rgb(238, 74, 74);
+  --global-dia:#ffd150;
+  --global-noite:#11222a;
 }
 
 body{
@@ -28,7 +30,7 @@ header{
   
 }
 
-img{
+.gefin{
   width: 100%;
   object-fit: cover;
   max-width: 300px;

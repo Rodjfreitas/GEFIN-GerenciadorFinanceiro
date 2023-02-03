@@ -1,3 +1,19 @@
+function tempAction(){
+  data = new Date()
+  var hour = data.getHours()
+  var header = document.querySelector('header')
+  var titulo = document.querySelector('header h1')
+  var imagem = document.querySelector('.gefin')
+  if(hour < 18){
+    header.style.backgroundColor = 'var(--global-dia)'
+    imagem.src = 'imagens/GefinLogo.png'
+  }else{
+    header.style.backgroundColor = 'var(--global-noite)'
+    imagem.src = 'imagens/GefinLogoNoite.png'
+    titulo.style.color = 'white'
+  }
+}
+
 function enterApp (){
   data = new Date()
   var ano = data.getFullYear()
@@ -9,7 +25,7 @@ function enterApp (){
     window.alert('Digite seu nome')
     name.focus()
   } else
-    if(inputAno.value.length == 0 || inputAno.value > ano){
+    if(inputAno.value.length == 0 || inputAno.value >= ano){
       window.alert('[ERRO] A data não pode ser maior que a atual ou igual à zero')
       inputAno.focus()
     }else{
