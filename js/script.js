@@ -79,14 +79,10 @@ function enterInformation(){
 
       switch (tipo){
         case "Entrada":
-          lanDescricao.style.color = 'var(--global-green)'
-          lanValor.style.color = 'var(--global-green)'
           lanTipo.style.color = 'var(--global-green)'
           break
 
         case "Saida":
-          lanDescricao.style.color = 'var(--global-red)'
-          lanValor.style.color = 'var(--global-red)'
           lanTipo.style.color = 'var(--global-red)'
           break
       }
