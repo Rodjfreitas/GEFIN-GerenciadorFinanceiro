@@ -171,14 +171,7 @@ form label:hover{
   transform: translateY(3px)
 }
 
-#txtDesc{
-}
-#txtValor{
 
-}
-#txtTipo{
-
-}
 
 #printInput{
   background-color: white;
@@ -202,6 +195,11 @@ form label:hover{
 
 .cabecalho{
   text-decoration: underline;
+}
+
+
+.lcm img:hover{
+  cursor: pointer;
 }
 
 #Anality h2{

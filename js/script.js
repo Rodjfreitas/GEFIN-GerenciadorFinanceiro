@@ -84,14 +84,16 @@ function enterInformation(){
 
       
       var lancamento = document.createElement('tr')
-      lancamento.setAttribute('class','lcm')
+      lancamento.setAttribute('class',`lcm ${tipo}`)
       var lanDescricao = document.createElement('td')
       var lanValor = document.createElement('td')
-      var lanTipo = document.createElement('td')      
+      var lanTipo = document.createElement('td')  
+      var lanLixo = document.createElement('td')    
 
       lanDescricao.innerText = `${Descricao.value}`
       lanValor.innerText = `${(Number(Valor.value)).toFixed(2)}`
       lanTipo.innerText = `${tipo}`
+      lanLixo.innerHTML = `<img src="imagens/favicon-16x16.png" class="apagar" value="X" onclick="removeLinha(this)">`
 
       switch (tipo){
         case "Entrada":
@@ -106,9 +108,12 @@ function enterInformation(){
       lancamento.appendChild(lanDescricao)
       lancamento.appendChild(lanValor)
       lancamento.appendChild(lanTipo)
+      lancamento.appendChild(lanLixo)
+      
 
       var printCab = document.querySelector('.printCab')
-      printCab.appendChild(lancamento)    
+      printCab.appendChild(lancamento) 
+      
     
     Valor.value = ""
     Descricao.value =""
@@ -147,6 +152,16 @@ function enterInformation(){
 
 
   
+
+}
+
+
+function removeLinha(element){
+  var el = element.closest('tr');
+  var index = Array.prototype.indexOf.call(el.parentNode.children, el);
+  console.log(index); // mostrar posição da linha como exemplo
+  //removo a linha
+  el.outerHTML = '';
 
 }
 
