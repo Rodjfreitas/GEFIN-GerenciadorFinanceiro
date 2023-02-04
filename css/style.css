@@ -204,6 +204,12 @@ form label:hover{
   text-decoration: underline;
 }
 
+#Anality h2{
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0;
+}
+
 
 @media (min-width:800px){
 
@@ -219,11 +225,13 @@ form label:hover{
   #Resultados{
     grid-area: A;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
   }
 
   #Resultados div{
     border-radius: 15px;
+    margin: 10px 0;
   }
 
   #lancamentos{
@@ -251,8 +259,7 @@ form label:hover{
   #Anality{
     grid-area: D;
   }
-  .Anality{
-  }
+ 
 
 }
 

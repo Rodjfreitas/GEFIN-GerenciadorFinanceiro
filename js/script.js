@@ -69,7 +69,7 @@ function enterInformation(){
 
 
       } else if(txtTipo[1].checked){
-        tipo = "Saida"
+        tipo = "Saída"
         saidas.innerText = `${(Number(saidas.value) + Number(Valor.value)).toFixed(2)}`
         
       }
@@ -98,7 +98,7 @@ function enterInformation(){
           lanTipo.style.color = 'var(--global-green)'
           break
 
-        case "Saida":
+        case "Saída":
           lanTipo.style.color = 'var(--global-red)'
           break
       }
@@ -123,7 +123,13 @@ function enterInformation(){
     } else{
       perfil.innerText = 'Parabéns! Seu planejamento financeiro é exemplar.'
     }
-    
+
+    var receitaDia = document.querySelector('.receitaDia')
+    var despesaDia = document.querySelector('.despesaDia')
+
+    receitaDia.innerText = `A média de Receitas por dia é de ${(Number(entradas.value) / 30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
+    despesaDia.innerText = `A média de Despesas por dia é de ${(Number(saidas.value)/30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
+
   }
 
 
