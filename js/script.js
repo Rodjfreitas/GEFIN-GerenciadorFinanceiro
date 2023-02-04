@@ -74,13 +74,8 @@ function enterInformation(){
         
       }
 
-      total.innerText = `${(Number(entradas.value) - Number(saidas.value)).toFixed(2)}`
-      
-      /*if(total.value > 0){
-        total.style.color = 'var(--global-green)'
-      }else{
-        total.style.color = 'var(--global-red)'
-      }*/
+      total.innerText = `${(Number(entradas.value) - Number(saidas.value)).toFixed(2)}` 
+
 
 
       
@@ -156,46 +151,69 @@ function removeLinha(element){
     }
 
     enterOrientacao()
-    
+
   el.outerHTML = '';
 
 }
 
 
 function enterOrientacao (){
-  var perfil = document.querySelector('.Anality')    
-  if(total.value < 0){
-    perfil.innerText = 'Perigo: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
-    perfil.style.backgroundColor = 'var(--global-red)'
-    perfil.style.color = 'white'
+  var perfil = document.querySelector('.Anality')
+  var entradas = document.querySelector('#entradas')
+  var saidas = document.querySelector('#saidas')
 
-  } else if(total.value < 300){
-    perfil.innerText = 'Alerta: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
-    perfil.style.backgroundColor = 'var(--global-dia)'
+  if(entradas.value == 0 && saidas.value == 0){
+    perfil.innerText = 'Não há lançamentos!'
+    perfil.style.backgroundColor = 'Transparent'
     perfil.style.color = 'black'
+    
   } else{
-    perfil.innerText = 'Parabéns! Você possui um planejamento financeiro satisfatório.'
-    perfil.style.backgroundColor = 'var(--global-green)'
-    perfil.style.color = 'black'
-  }
+    if(total.value < 0){
+      perfil.innerText = 'Perigo: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
+      perfil.style.backgroundColor = 'var(--global-red)'
+      perfil.style.color = 'white'
 
+    } else if(total.value < 300){
+      perfil.innerText = 'Alerta: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
+      perfil.style.backgroundColor = 'var(--global-dia)'
+      perfil.style.color = 'black'
+    } else{
+      perfil.innerText = 'Parabéns! Você possui um planejamento financeiro satisfatório.'
+      perfil.style.backgroundColor = 'var(--global-green)'
+      perfil.style.color = 'black'
+    }
+  }   
   var receitaDia = document.querySelector('.receitaDia')
   var despesaDia = document.querySelector('.despesaDia')
 
-  receitaDia.innerText = `A média de Receitas por dia é de ${(Number(entradas.value) 
-    / 30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
+  if(entradas.value == 0 && saidas.value == 0){
+    receitaDia.innerText = ""
+    despesaDia.innerText = ""
+  }else{
+  
+    receitaDia.innerText = `A média de Receitas por dia é de ${(Number(entradas.value) 
+      / 30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
 
-  despesaDia.innerText = `A média de Despesas por dia é de ${(Number(saidas.value)
-    /30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
+    despesaDia.innerText = `A média de Despesas por dia é de ${(Number(saidas.value)
+      /30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
+
+  }
 
   var resume = document.querySelector('.resume')
-  resume.innerText = `A cada real ganho, você está direcionando ${(Number(saidas.value
-    /entradas.value)).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} para pagar despesas`
 
-    if(total.value > 0){
+
+  if(entradas.value == 0 && saidas.value == 0){
+    resume.innerText = ""
+  }else{
+    if(total.value >= 0){
       total.style.color = 'var(--global-green)'
+      resume.innerText = `A cada real ganho, você está direcionando ${(Number(saidas.value
+        /entradas.value)).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} para pagar despesas`
     }else{
       total.style.color = 'var(--global-red)'
+      resume.innerText = 'Você não possui saldo suficiente para pagar todas as suas despesas.'
+
     }
+  }
 }
 

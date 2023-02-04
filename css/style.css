@@ -190,7 +190,6 @@ form label:hover{
 .Anality{
   text-align: center;
   padding: 20px;
-  color: var(--global-colorLogo);
 }
 
 .cabecalho{
@@ -210,6 +209,8 @@ form label:hover{
 
 .resume{
   text-align: center;
+  width: 300px;
+  margin: auto;
 }
 
 
