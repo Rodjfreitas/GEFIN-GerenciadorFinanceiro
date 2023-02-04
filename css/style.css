@@ -210,6 +210,10 @@ form label:hover{
   margin: 10px 0;
 }
 
+.resume{
+  text-align: center;
+}
+
 
 @media (min-width:800px){
 
