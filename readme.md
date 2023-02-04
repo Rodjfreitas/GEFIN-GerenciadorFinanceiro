@@ -8,6 +8,9 @@ O objetivo deste projeto é focar na evolução do desenvolvimento da linguagem 
 🔨 CSS3
 🔨 HTML5
 
+## Considerações Iniciais
+
+Estou muito feliz de concluir este projeto. Totalmente autoral, e principalmente por ter realizado a criação e execução da linha de código javascript de forma autônoma. Desta vez, todo o conhecimento que possuo no momento sobre javascript foram colocados em práticas, sem a necessidade de "copiar e colar" códigos na internet, como no projeto anterior da calculadora.
 
 ## Desafios no Código
 
@@ -52,3 +55,6 @@ Posteriormente, lembrei que poderia utilizar tabelas em html, e decidi alterar a
 Esse foi o resultado com alteração para tabela:
 
 ![lista-modelo-tabela](https://user-images.githubusercontent.com/119018022/216669847-43de9c41-05eb-4a3e-9310-ab515eda6e7e.jpg)
+
+
+Outras alterações realizadas durante o desenvolvimento do projeto, foi o desmembramento de funções. Inicialmente, todo o código estava dentro do evento clique do botão input, porém, com o decorrer, fui fazendo testes, e criando funções com os códigos que estavam dentro da função principal, e isso ajudou principalmente a não necessitar repetir o código  para a execução de outro evento.
