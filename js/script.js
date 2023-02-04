@@ -89,7 +89,7 @@ function enterInformation(){
       lanDescricao.innerText = `${Descricao.value}`
       lanValor.innerText = `${(Number(Valor.value)).toFixed(2)}`
       lanTipo.innerText = `${tipo}`
-      lanLixo.innerHTML = `<img src="imagens/favicon-16x16.png" class="apagar" value="X" onclick="removeLinha(this)">`
+      lanLixo.innerHTML = `<img src="imagens/recycle-bin.png" class="apagar" value="X" onclick="removeLinha(this)">`
 
       switch (tipo){
         case "Entrada":
