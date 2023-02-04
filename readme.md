@@ -1,9 +1,15 @@
 ## Gerenciador financeiro - Gefin
 
-O objetivo deste projeto é focar na evolução do desenvolvimento da linguagem javascript. Para isso, decidi criar uma gerenciador financeiro, que apresentará as despesas e receitas pessoais, e o saldo total. O usuário será capaz de inserir e excluir itens adicionados à lista.
+O objetivo deste projeto é focar na evolução do desenvolvimento da linguagem javascript. Para isso, decidi criar um gerenciador financeiro, que apresentará as despesas e receitas pessoais, e o saldo total. O usuário será capaz de inserir e excluir itens adicionados à lista.
+
+## Ferramentas
+
+🔨 Javascript
+🔨 CSS3
+🔨 HTML5
 
 
-## Código
+## Desafios no Código
 
 O primeiro código que desenvolvi para criação da lista ao submeter os lançamentos no input foram conforme observa-se abaixo:
 
