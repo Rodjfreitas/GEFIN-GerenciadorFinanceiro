@@ -75,11 +75,12 @@ function enterInformation(){
       }
 
       total.innerText = `${(Number(entradas.value) - Number(saidas.value)).toFixed(2)}`
-      if(total.value > 0){
+      
+      /*if(total.value > 0){
         total.style.color = 'var(--global-green)'
       }else{
         total.style.color = 'var(--global-red)'
-      }
+      }*/
 
 
       
@@ -120,34 +121,7 @@ function enterInformation(){
     Descricao.focus()
 
 
-    var perfil = document.querySelector('.Anality')    
-    if(total.value < 0){
-      perfil.innerText = 'Perigo: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
-      perfil.style.backgroundColor = 'var(--global-red)'
-      perfil.style.color = 'white'
-
-    } else if(total.value < 300){
-      perfil.innerText = 'Alerta: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
-      perfil.style.backgroundColor = 'var(--global-dia)'
-      perfil.style.color = 'black'
-    } else{
-      perfil.innerText = 'Parabéns! Você possui um planejamento financeiro satisfatório.'
-      perfil.style.backgroundColor = 'var(--global-green)'
-      perfil.style.color = 'black'
-    }
-
-    var receitaDia = document.querySelector('.receitaDia')
-    var despesaDia = document.querySelector('.despesaDia')
-
-    receitaDia.innerText = `A média de Receitas por dia é de ${(Number(entradas.value) 
-      / 30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
-
-    despesaDia.innerText = `A média de Despesas por dia é de ${(Number(saidas.value)
-      /30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
-
-    var resume = document.querySelector('.resume')
-    resume.innerText = `A cada real ganho, você está direcionando ${(Number(saidas.value
-      /entradas.value)).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} para pagar despesas`
+    enterOrientacao()
   }
 
 
@@ -161,7 +135,67 @@ function removeLinha(element){
   var index = Array.prototype.indexOf.call(el.parentNode.children, el);
   console.log(index); // mostrar posição da linha como exemplo
   //removo a linha
+
+    var printCab = document.querySelector('.printCab')
+    valor = printCab.children.item(index).children.item(1).innerText
+    tipo = printCab.children.item(index).children.item(2).innerText
+    var entradas = document.querySelector('#entradas')
+    var saidas = document.querySelector('#saidas')
+    var total = document.querySelector('#total')
+
+    switch (tipo){
+      case "Entrada":
+        entradas.innerText = `${(Number(entradas.value) - Number(valor)).toFixed(2)}`
+        total.innerText = `${(Number(entradas.value) - Number(saidas.value)).toFixed(2)}`
+        break
+
+      case "Saída":
+        saidas.innerText = `${(Number(saidas.value) - Number(valor)).toFixed(2)}`
+        total.innerText = `${(Number(entradas.value) - Number(saidas.value)).toFixed(2)}`
+        break
+    }
+
+    enterOrientacao()
+    
   el.outerHTML = '';
 
+}
+
+
+function enterOrientacao (){
+  var perfil = document.querySelector('.Anality')    
+  if(total.value < 0){
+    perfil.innerText = 'Perigo: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
+    perfil.style.backgroundColor = 'var(--global-red)'
+    perfil.style.color = 'white'
+
+  } else if(total.value < 300){
+    perfil.innerText = 'Alerta: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
+    perfil.style.backgroundColor = 'var(--global-dia)'
+    perfil.style.color = 'black'
+  } else{
+    perfil.innerText = 'Parabéns! Você possui um planejamento financeiro satisfatório.'
+    perfil.style.backgroundColor = 'var(--global-green)'
+    perfil.style.color = 'black'
+  }
+
+  var receitaDia = document.querySelector('.receitaDia')
+  var despesaDia = document.querySelector('.despesaDia')
+
+  receitaDia.innerText = `A média de Receitas por dia é de ${(Number(entradas.value) 
+    / 30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
+
+  despesaDia.innerText = `A média de Despesas por dia é de ${(Number(saidas.value)
+    /30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
+
+  var resume = document.querySelector('.resume')
+  resume.innerText = `A cada real ganho, você está direcionando ${(Number(saidas.value
+    /entradas.value)).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} para pagar despesas`
+
+    if(total.value > 0){
+      total.style.color = 'var(--global-green)'
+    }else{
+      total.style.color = 'var(--global-red)'
+    }
 }
 
