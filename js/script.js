@@ -169,12 +169,12 @@ function enterOrientacao (){
     
   } else{
     if(total.value < 0){
-      perfil.innerText = 'Perigo: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
+      perfil.innerText = 'Alerta: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
       perfil.style.backgroundColor = 'var(--global-red)'
       perfil.style.color = 'white'
 
     } else if(total.value < 300){
-      perfil.innerText = 'Alerta: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
+      perfil.innerText = 'Atenção: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
       perfil.style.backgroundColor = 'var(--global-dia)'
       perfil.style.color = 'black'
     } else{
@@ -215,5 +215,10 @@ function enterOrientacao (){
 
     }
   }
+}
+
+
+function Imprimir (){
+  window.print()
 }
 

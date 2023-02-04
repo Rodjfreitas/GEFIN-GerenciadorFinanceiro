@@ -190,6 +190,7 @@ form label:hover{
 .Anality{
   text-align: center;
   padding: 20px;
+  margin-bottom: 30px;
 }
 
 .cabecalho{
@@ -207,10 +208,26 @@ form label:hover{
   margin: 10px 0;
 }
 
+#Anality button{
+  display: flex;
+  margin: auto;
+  padding: 15px 50px;
+  font-size: 20px;
+  border: none;
+  margin-top: 30px;
+}
+
+#Anality button:hover{
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 .resume{
   text-align: center;
   width: 300px;
   margin: auto;
+  margin-top: 30px;
 }
 
 
