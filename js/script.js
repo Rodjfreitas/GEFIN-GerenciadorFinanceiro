@@ -118,11 +118,17 @@ function enterInformation(){
     var perfil = document.querySelector('.Anality')    
     if(total.value < 0){
       perfil.innerText = 'Perigo: Sua situação financeira inspira cuidados. Gefin sugere uma reeducação financeira e uma reestruturação de planejamento.'
-      
+      perfil.style.backgroundColor = 'var(--global-red)'
+      perfil.style.color = 'white'
+
     } else if(total.value < 300){
       perfil.innerText = 'Alerta: Seus compromissos estão sendo cumpridos, mas você não possui margem de reserva satisfatória.'
+      perfil.style.backgroundColor = 'var(--global-dia)'
+      perfil.style.color = 'black'
     } else{
-      perfil.innerText = 'Parabéns! Seu planejamento financeiro é exemplar.'
+      perfil.innerText = 'Parabéns! Você possui um planejamento financeiro satisfatório.'
+      perfil.style.backgroundColor = 'var(--global-green)'
+      perfil.style.color = 'black'
     }
 
     var receitaDia = document.querySelector('.receitaDia')
@@ -130,7 +136,7 @@ function enterInformation(){
 
     receitaDia.innerText = `A média de Receitas por dia é de ${(Number(entradas.value) 
       / 30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
-      
+
     despesaDia.innerText = `A média de Despesas por dia é de ${(Number(saidas.value)
       /30).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`
 
