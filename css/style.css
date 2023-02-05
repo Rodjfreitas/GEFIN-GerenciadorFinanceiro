@@ -208,16 +208,16 @@ form label:hover{
   margin: 10px 0;
 }
 
-#Anality button{
+#btnSalvar{
   display: flex;
   margin: auto;
-  padding: 15px 50px;
+  padding: 10px 20px;
   font-size: 20px;
   border: none;
   margin-top: 30px;
 }
 
-#Anality button:hover{
+#btnSalvar:hover{
   cursor: pointer;
   border: 1px solid black;
   border-radius: 10px;
@@ -231,11 +231,12 @@ form label:hover{
 }
 
 
+
+
 @media (min-width:800px){
 
   #pageAction{
     width: 800px;
-    display: grid;
     grid-template-areas: 
     'A B B'
     'C C C'

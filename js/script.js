@@ -17,6 +17,7 @@ function tempAction(){
 function enterApp (){
   data = new Date()
   var ano = data.getFullYear()
+  var hour = data.getHours()
   var inputAno = document.querySelector('#txtYear')
   var name = document.querySelector('#txtName')
   var header = document.querySelector('header')
@@ -32,17 +33,22 @@ function enterApp (){
       alert(`Olá ${name.value}. Bem-vindo ao Gerenciador Financeiro`)
       var identificacao = document.createElement('p')
       identificacao.setAttribute('id','ident')
-      identificacao.innerText = `${name.value} - ${ano - Number(inputAno.value)} anos`
-      identificacao.style.color = 'white'
-      identificacao.style.backgroundColor = 'var(--global-colorLogo)'
+      identificacao.innerText = `${name.value} / ${ano - Number(inputAno.value)} anos`      
       identificacao.style.padding = '0px 20px'
       header.appendChild(identificacao)
+
+
+      if(hour < 18){
+        identificacao.style.color = 'black'
+      }else{
+        identificacao.style.color = 'white'
+      }
 
       var pagePrincipal = document.querySelector('#pageMain')
       pagePrincipal.style.transition = 'width 3s ease-in-out'
       pagePrincipal.style.display = 'none'
       var pageAction = document.querySelector('#pageAction')
-      pageAction.style.display = 'flex'
+      pageAction.style.display = 'grid'
     }
 }
 
@@ -154,6 +160,9 @@ function removeLinha(element){
 
   el.outerHTML = '';
 
+  var Descricao = document.querySelector('#txtDesc')
+  Descricao.focus()
+
 }
 
 
@@ -221,4 +230,6 @@ function enterOrientacao (){
 function Imprimir (){
   window.print()
 }
+
+
 
